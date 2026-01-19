@@ -1,0 +1,220 @@
+/* ------------------------------
+   Global Styles
+------------------------------ */
+:root{
+  --bg: #0d0d0d;
+  --panel: #141414;
+  --panel-2: #111;
+  --text: #eaeaea;
+  --muted: #bbb;
+  --gold: #f0d98a;
+  --border: #333;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: 'Garamond', Georgia, 'Times New Roman', serif;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+p, li {
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+strong { color: #fff; }
+
+/* Links + focus */
+a { color: var(--gold); }
+a:hover { color: #fff; }
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ------------------------------
+   Header & Navigation
+------------------------------ */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--panel-2);
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+}
+
+header .subheadline {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 0 0 1.5rem 0;
+}
+
+nav { margin-top: 1rem; }
+
+nav a {
+  display: inline-block;
+  color: var(--gold);
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 700;
+  opacity: 0.92;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease, opacity 0.25s ease, border-color 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffffff;
+  opacity: 1;
+  border-color: #ffffff;
+}
+
+/* ------------------------------
+   Sections
+------------------------------ */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+}
+
+section h2 {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+/* Lists */
+ul { padding-left: 1.25rem; }
+.buy-links { list-style: none; padding-left: 0; }
+.buy-links li { margin: 0.4rem 0; }
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+.button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.65rem 1.2rem;
+  background-color: var(--gold);
+  color: #111;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 6px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-1px);
+}
+
+/* ------------------------------
+   Book Cover Images
+------------------------------ */
+.cover, .cover-large {
+  display: block;
+  margin: 2rem auto;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 25px rgba(240, 217, 138, 0.2);
+}
+
+.cover { width: 220px; height: auto; }
+.cover-large { width: 320px; max-width: 85%; height: auto; }
+
+/* ------------------------------
+   Book & Feature Sections
+------------------------------ */
+.featured {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.featured .book {
+  flex: 1 1 350px;
+  text-align: center;
+  background-color: var(--panel);
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+}
+
+.featured .book.upcoming {
+  background-color: #101010;
+  border-style: dashed;
+}
+
+/* Book detail pages */
+.book-detail {
+  background-color: var(--panel);
+  border: 1px solid #222;
+  border-radius: 10px;
+}
+
+.book-detail.upcoming {
+  background-color: #101010;
+}
+
+/* Quotes */
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: #0f0f0f;
+  border-left: 4px solid var(--gold);
+  color: #e6e6e6;
+}
+
+blockquote em { color: var(--gold); }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-top: 1px solid var(--border);
+  background-color: var(--panel-2);
+}
+
+footer p {
+  margin: 0.4rem 0;
+  color: #bbb;
+}
+
+footer em { color: var(--gold); }
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+@media (max-width: 720px) {
+  header { padding: 2.25rem 1rem; }
+  header h1 { font-size: 1.9rem; }
+  section { padding: 2rem 1.25rem; }
+  .featured { gap: 1.5rem; }
+}
